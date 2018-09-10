@@ -3,7 +3,10 @@ guid: 0b115df4db215a7428e8b4051df7ac03
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rngUnit: {fileID: 1422110875449126, guid: d1d77b026961aac45b2c6ec022a9e015, type: 2}
+  - meleeUnit: {fileID: 1422110875449126, guid: 549de03d485d1cf44a5131722ff0486b,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

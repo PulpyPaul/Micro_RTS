@@ -25,14 +25,14 @@ public class SliderManager : MonoBehaviour {
     void CalculatePercentage()
     {
         float total = slider1.value+ slider2.value + slider3.value;
-        Debug.Log(total);
+        //Debug.Log(total);
 
 
         int s1 = (int)(slider1.value/total * 100);
         int s2 = (int)(slider2.value/total *100);
         int s3 = (int)(slider3.value/total *100);
 
-        Debug.Log(s1);
+        //Debug.Log(s1);
 
 
 

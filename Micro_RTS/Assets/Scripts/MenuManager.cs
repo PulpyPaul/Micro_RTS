@@ -15,6 +15,10 @@ public class MenuManager : MonoBehaviour {
     public Button btn2;
     public Button btn3;
 
+	//public Toggle top;
+//	public Toggle mid;
+//	public Toggle bot;
+
     // Use this for initialization
     void Start () {
         cmdPanel = GameObject.Find("CMD_Panel");

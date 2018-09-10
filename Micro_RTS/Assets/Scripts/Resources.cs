@@ -7,8 +7,8 @@ public class Resources : MonoBehaviour {
     int MeleeRes, RangedRes, SpecialRes;//Ints for the resources
    public Slider MeleeSlider, RangedSlider, SpecialSlider;//Slider bar objects
     bool MeleeOn, RangedOn, SpecialOn;//Bools for if production is on
-    int MeleeProduction, RangedProduction, SpecialProduction;//Current production per tick
-    int CurrentMelee, CurrentRanged, CurrentSpecial;//Overall total for that resouce
+    float MeleeProduction, RangedProduction, SpecialProduction;//Current production per tick
+    float CurrentMelee, CurrentRanged, CurrentSpecial;//Overall total for that resouce
 	// Use this for initialization
 	void Start () {
 
@@ -55,7 +55,7 @@ public class Resources : MonoBehaviour {
         //If the slider is above 0, then turn the productions on, and change the production values
         if (MeleeSlider.value >= .01)
         {
-            MeleeProduction =(int) 10 * MeleeEndPercent;
+            MeleeProduction =(10 * MeleeEndPercent/100 * Time.deltaTime);
             MeleeOn = true;
         }
         else
@@ -64,7 +64,7 @@ public class Resources : MonoBehaviour {
         }
         if (RangedSlider.value >= .01)
         {
-            RangedProduction = (int)10 * RangedEndPercent;
+            RangedProduction = (10 * RangedEndPercent/100*Time.deltaTime);
             RangedOn = true;
         }
         else
@@ -73,7 +73,7 @@ public class Resources : MonoBehaviour {
         }
         if (SpecialSlider.value >= .01)
         {
-            SpecialProduction = (int)10 * SpecialEndPercent;
+            SpecialProduction = (10 * SpecialEndPercent/100 * Time.deltaTime);
             SpecialOn = true;
         }
         else
@@ -82,8 +82,8 @@ public class Resources : MonoBehaviour {
         }
 
         //Sets the Top Bar UI values 
-        MeleeUI.text = "Melee: " + CurrentMelee;
-        RangedUI.text = "Ranged: " + CurrentRanged;
-        SpecialUI.text = "Special: " + CurrentSpecial;
+        MeleeUI.text = "Melee: " + CurrentMelee.ToString("F0");
+        RangedUI.text = "Ranged: " + CurrentRanged.ToString("F0") ;
+        SpecialUI.text = "Special: " + CurrentSpecial.ToString("F0") ;
     }
 }

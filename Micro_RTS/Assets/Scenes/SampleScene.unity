@@ -1986,7 +1986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b115df4db215a7428e8b4051df7ac03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit1: {fileID: 1422110875449126, guid: 549de03d485d1cf44a5131722ff0486b, type: 2}
+  rngUnit: {fileID: 1422110875449126, guid: d1d77b026961aac45b2c6ec022a9e015, type: 2}
+  meleeUnit: {fileID: 1422110875449126, guid: 549de03d485d1cf44a5131722ff0486b, type: 2}
+  topLane: {fileID: 903980364}
+  midLane: {fileID: 1173966260}
+  botLane: {fileID: 1091110421}
 --- !u!1 &342875128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000014835969, y: -24.199997}
+  m_AnchoredPosition: {x: 0.0000014835969, y: -24.200012}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610510544
@@ -7414,7 +7418,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 338683001}
-        m_MethodName: SpawnaUnit
+        m_MethodName: SpawnMelee
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7716,7 +7720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000009534597, y: 24.199997}
+  m_AnchoredPosition: {x: -0.0000009534597, y: 24.200012}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619264815
@@ -7870,7 +7874,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1620047366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 338683001}
+        m_MethodName: SpawnRng
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1620047366

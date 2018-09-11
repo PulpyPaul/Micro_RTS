@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SpawnUnit : MonoBehaviour {
     public GameObject rngUnit;
 	public GameObject meleeUnit;
-
+    public Resources PlayerResources;
 	public Toggle topLane;
 	public Toggle midLane;
 	public Toggle botLane;
@@ -17,6 +17,7 @@ public class SpawnUnit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        PlayerResources = this.gameObject.GetComponent<Resources>();
 		topLoc = new Vector3 (-3.5f, 3, 0);
 		midLoc = new Vector3 (-3.5f, 0, 0);
 		botLoc = new Vector3 (-3.5f, -3, 0);
@@ -29,37 +30,64 @@ public class SpawnUnit : MonoBehaviour {
 
 	public void SpawnRng()
 	{
+
 		if (topLane.isOn) {
-			GameObject Unit = Instantiate(rngUnit);
-			Unit.transform.position = topLoc;
+            if (rngUnit.GetComponent<Unit>().cost < PlayerResources.CurrentRanged)
+            {
+                PlayerResources.CurrentRanged -= rngUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(rngUnit);
+                Unit.transform.position = topLoc;
+            }
 		}
 
-		if (midLane.isOn) {
-			GameObject Unit = Instantiate(rngUnit);
-			Unit.transform.position = midLoc;
-		}
+        if (midLane.isOn)
+        {
+            if (rngUnit.GetComponent<Unit>().cost < PlayerResources.CurrentRanged)
+            {
+                PlayerResources.CurrentRanged -= rngUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(rngUnit);
+                Unit.transform.position = midLoc;
+            }
+        }
 
-		if (botLane.isOn) {
-			GameObject Unit = Instantiate(rngUnit);
-			Unit.transform.position = botLoc;
-		}
+        if (botLane.isOn)
+        {
+            if (rngUnit.GetComponent<Unit>().cost < PlayerResources.CurrentRanged)
+            {
+                PlayerResources.CurrentRanged -= rngUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(rngUnit);
+                Unit.transform.position = botLoc;
+            }
+        }
 	}
 
 	public void SpawnMelee()
 	{
 		if (topLane.isOn) {
-			GameObject Unit = Instantiate(meleeUnit);
-			Unit.transform.position = topLoc;
+            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
+            {
+                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(meleeUnit);
+                Unit.transform.position = topLoc;
+            }
 		}
 
 		if (midLane.isOn) {
-			GameObject Unit = Instantiate(meleeUnit);
-			Unit.transform.position = midLoc;
+            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
+            {
+                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(meleeUnit);
+                Unit.transform.position = midLoc;
+            }
 		}
 
 		if (botLane.isOn) {
-			GameObject Unit = Instantiate(meleeUnit);
-			Unit.transform.position = botLoc;
+            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
+            {
+                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
+                GameObject Unit = Instantiate(meleeUnit);
+                Unit.transform.position = botLoc;
+            }
 		}
 	}
 }

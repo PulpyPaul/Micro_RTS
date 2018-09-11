@@ -5,6 +5,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour {
 
 	public float speed;
+    public float cost;
 
 	// Use this for initialization
 	void Start () {

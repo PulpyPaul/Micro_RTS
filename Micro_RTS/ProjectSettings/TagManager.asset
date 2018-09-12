@@ -6,6 +6,9 @@ TagManager:
   tags:
   - canvas
   - unit
+  - eunit
+  - base
+  - enemybase
   layers:
   - Default
   - TransparentFX

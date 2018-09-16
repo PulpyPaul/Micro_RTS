@@ -9,6 +9,8 @@ TagManager:
   - eunit
   - base
   - enemybase
+  - win
+  - lose
   layers:
   - Default
   - TransparentFX

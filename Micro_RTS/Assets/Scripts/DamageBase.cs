@@ -5,10 +5,10 @@ using UnityEngine;
 public class DamageBase : MonoBehaviour {
 
     private float baseHealth = 100;
+    public EndGame instance;
 
-	// Use this for initialization
-	void Start () {
-		
+    // Use this for initialization
+    void Start () {
 	}
 	
 	// Update is called once per frame
@@ -23,6 +23,11 @@ public class DamageBase : MonoBehaviour {
         if(other.tag == "unit")
         {
             baseHealth -= 5;
+
+            if(baseHealth < 1)
+            {
+                instance.WinGame();
+            }
 
             Debug.Log("Base Health: " + baseHealth);
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageBase : MonoBehaviour {
 
     private float baseHealth = 100;
-    public EndGame instance;
+    public EndGame SliderManager;
 
     // Use this for initialization
     void Start () {
@@ -18,18 +18,19 @@ public class DamageBase : MonoBehaviour {
 
 
     // On collision, destroy if the tag of the colliding object is unit
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "unit")
+
+        if(other.tag == "unit" || other.tag == "eunit")
         {
             baseHealth -= 5;
 
-            if(baseHealth < 1)
-            {
-                instance.WinGame();
-            }
+            if (this.tag == "base" && baseHealth < 1)
+                SliderManager.LoseGame();
+            else if (this.tag == "enemyBase" && baseHealth < 1)
+                SliderManager.WinGame();
 
-            Debug.Log("Base Health: " + baseHealth);
+            Debug.Log(this.tag + " health: " + baseHealth);
 
             Destroy(other.gameObject);
         }

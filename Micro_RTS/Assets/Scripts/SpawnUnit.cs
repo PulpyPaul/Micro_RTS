@@ -26,9 +26,9 @@ public class SpawnUnit : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PlayerResources = this.gameObject.GetComponent<Resources>();
-		topLoc = new Vector3 (-3.5f, 3, 92);
-		midLoc = new Vector3 (-3.5f, 0, 92);
-		botLoc = new Vector3 (-3.5f, -3, 92);
+		topLoc = new Vector3 (-3.5f, 3, 0);
+		midLoc = new Vector3 (-3.5f, 0, 0);
+		botLoc = new Vector3 (-3.5f, -3, 0);
 
         InvokeRepeating("spawnEnemy", 3.0f, 0.5f);
     }

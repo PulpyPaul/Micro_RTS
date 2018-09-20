@@ -30,7 +30,7 @@ public class SpawnUnit : MonoBehaviour {
 		midLoc = new Vector3 (-3.5f, 0, 0);
 		botLoc = new Vector3 (-3.5f, -3, 0);
 
-        InvokeRepeating("spawnEnemy", 3.0f, 0.5f);
+        InvokeRepeating("spawnEnemy", 3.0f, 2.0f);
     }
 	
 	// Update is called once per frame

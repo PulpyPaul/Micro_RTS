@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageBase : MonoBehaviour {
+public class DamageBase : Unit {
 
-    private float baseHealth = 100;
     public EndGame SliderManager;
 
     // Use this for initialization
     void Start () {
+        health = 1000;
 	}
 	
 	// Update is called once per frame
@@ -23,16 +23,14 @@ public class DamageBase : MonoBehaviour {
 
         if(other.tag == "unit" || other.tag == "eunit")
         {
-            baseHealth -= 5;
-
-            if (this.tag == "base" && baseHealth < 1)
+            if (this.tag == "base" && health < 1)
                 SliderManager.LoseGame();
-            else if (this.tag == "enemyBase" && baseHealth < 1)
+            else if (this.tag == "enemyBase" && health < 1)
                 SliderManager.WinGame();
 
-            Debug.Log(this.tag + " health: " + baseHealth);
+            Debug.Log(this.tag + " health: " + health);
 
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
     }
 }

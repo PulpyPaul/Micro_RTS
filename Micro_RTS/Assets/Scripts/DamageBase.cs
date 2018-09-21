@@ -20,7 +20,7 @@ public class DamageBase : Unit {
     // On collision, destroy if the tag of the colliding object is unit
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        Debug.Log(other.gameObject.tag + " name: " + other.gameObject.name);
         if(other.tag == "unit" || other.tag == "eunit")
         {
             if (this.tag == "base" && health < 1)

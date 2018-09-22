@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61071433861382376}
   - component: {fileID: 50460661385797646}
   - component: {fileID: 114338145397641368}
+  - component: {fileID: 114736648857937238}
   m_Layer: 0
   m_Name: TestUnitRng
   m_TagString: unit
@@ -104,8 +105,39 @@ MonoBehaviour:
   health: 50
   damage: 0
   timer: 3
-  rest: 1
   bullet: {fileID: 1861078887159112, guid: 25b228a2169c6a045bfb1514ba1a226b, type: 2}
+--- !u!114 &114736648857937238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1422110875449126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 209
+    i1: 215
+    i2: 123
+    i3: 2
+    i4: 105
+    i5: 97
+    i6: 170
+    i7: 196
+    i8: 91
+    i9: 44
+    i10: 110
+    i11: 192
+    i12: 34
+    i13: 169
+    i14: 224
+    i15: 21
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212581199077151592
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8be8a931f8382d847bdcbbde5af408c9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GameManager: {fileID: 1829458866422810, guid: f1c4000ea38e7764ba2b2c96f0250e0d,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

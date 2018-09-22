@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1494785560827304}
+  m_RootGameObject: {fileID: 1829458866422810}
   m_IsPrefabAsset: 1
---- !u!1 &1494785560827304
+--- !u!1 &1829458866422810
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4696359492689194}
-  - component: {fileID: 114739305917372266}
-  - component: {fileID: 114253702897854926}
+  - component: {fileID: 4482141022777794}
+  - component: {fileID: 114463022618815748}
+  - component: {fileID: 114652040458786966}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4696359492689194
+--- !u!4 &4482141022777794
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494785560827304}
+  m_GameObject: {fileID: 1829458866422810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.37263805, y: 1.8139889, z: -0.072254}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114253702897854926
+--- !u!114 &114463022618815748
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494785560827304}
+  m_GameObject: {fileID: 1829458866422810}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b115df4db215a7428e8b4051df7ac03, type: 3}
@@ -54,38 +54,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rngUnit: {fileID: 1422110875449126, guid: d1d77b026961aac45b2c6ec022a9e015, type: 2}
   meleeUnit: {fileID: 1422110875449126, guid: 549de03d485d1cf44a5131722ff0486b, type: 2}
-  erngUnit: {fileID: 1649383013859600, guid: 4e3f3fcf47061cf4ca4e7b0b2a1c3265, type: 2}
-  emeleeUnit: {fileID: 1572886731687760, guid: 7dba69d9bafdc0147bffee318557b598, type: 2}
+  erngUnit: {fileID: 0}
+  emeleeUnit: {fileID: 0}
   PlayerResources: {fileID: 0}
   topLane: {fileID: 0}
   midLane: {fileID: 0}
   botLane: {fileID: 0}
---- !u!114 &114739305917372266
+  topSpawn: {fileID: 1613543224650136, guid: 7a86c532c7ea68e43943cee5d11e6c4a, type: 2}
+  midSpawn: {fileID: 1638972232626928, guid: 81b42e0f03cc4c14a971d228bb3aeef5, type: 2}
+  botSpawn: {fileID: 1373011246988466, guid: 728ecb7d2e6b0b74abbf0058e5844bac, type: 2}
+  networkMng: {fileID: 0}
+--- !u!114 &114652040458786966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494785560827304}
+  m_GameObject: {fileID: 1829458866422810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b22c35f5d9a684bb6a06f996dd014b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f94c9915fb70dd449f337ca6fb20b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MeleeUI: {fileID: 0}
-  RangedUI: {fileID: 0}
-  SpecialUI: {fileID: 0}
-  MeleePercent: {fileID: 0}
-  RangedPercent: {fileID: 0}
-  SpecialPercent: {fileID: 0}
-  MeleeSlider: {fileID: 0}
-  RangedSlider: {fileID: 0}
-  SpecialSlider: {fileID: 0}
-  MeleeOn: 0
-  RangedOn: 0
-  SpecialOn: 0
-  MeleeProduction: 0
-  RangedProduction: 0
-  SpecialProduction: 0
-  CurrentMelee: 0
-  CurrentRanged: 0
-  CurrentSpecial: 0
+  playerLeftSpawn: {fileID: 0}
+  playerRightSpawn: {fileID: 0}

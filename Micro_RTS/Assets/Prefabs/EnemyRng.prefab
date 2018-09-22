@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61369431541523328}
   - component: {fileID: 50652502734286668}
   - component: {fileID: 114218120763326338}
+  - component: {fileID: 114263175157631696}
   m_Layer: 0
   m_Name: EnemyRng
   m_TagString: eunit
@@ -104,8 +105,39 @@ MonoBehaviour:
   health: 50
   damage: 0
   timer: 0
-  rest: 1
   bullet: {fileID: 1861078887159112, guid: 25b228a2169c6a045bfb1514ba1a226b, type: 2}
+--- !u!114 &114263175157631696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649383013859600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 78
+    i1: 63
+    i2: 63
+    i3: 207
+    i4: 71
+    i5: 6
+    i6: 28
+    i7: 244
+    i8: 202
+    i9: 78
+    i10: 123
+    i11: 11
+    i12: 42
+    i13: 28
+    i14: 50
+    i15: 101
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212500354489540658
 SpriteRenderer:
   m_ObjectHideFlags: 1

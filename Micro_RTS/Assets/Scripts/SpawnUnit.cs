@@ -15,6 +15,20 @@ public class SpawnUnit : MonoBehaviour {
 	public Toggle midLane;
 	public Toggle botLane;
 
+	public GameObject topSpawn;
+	public GameObject midSpawn;
+	public GameObject botSpawn;
+
+	public GameObject networkMng;
+	CustomNetworkMngr networkMngScript;
+
+
+	public enum Lane {
+		Top, 
+		Mid, 
+		Bot
+	};
+
 	Vector3 topLoc;
 	Vector3 midLoc;
 	Vector3 botLoc;
@@ -30,7 +44,12 @@ public class SpawnUnit : MonoBehaviour {
 		midLoc = new Vector3 (-3.5f, 0, 0);
 		botLoc = new Vector3 (-3.5f, -3, 0);
 
-        InvokeRepeating("spawnEnemy", 3.0f, 2.0f);
+		Lane lane;
+		lane = Lane.Top;
+		Debug.Log (networkMng);
+		networkMngScript = networkMng.GetComponent<CustomNetworkMngr> ();
+		Debug.Log (networkMngScript);
+        //InvokeRepeating("spawnEnemy", 3.0f, 2.0f);
     }
 	
 	// Update is called once per frame
@@ -117,33 +136,26 @@ public class SpawnUnit : MonoBehaviour {
         }
 	}
 
-	public void SpawnMelee()
+	public void SpawnMelee(Lane lane)
 	{
-		if (topLane.isOn) {
-            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
-            {
-                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
-                GameObject Unit = Instantiate(meleeUnit);
-                Unit.transform.position = topLoc;
-            }
+		switch (lane)
+		{
+		case Lane.Top:
+			{
+				networkMngScript.SpawnUnit (meleeUnit, topLoc);
+				break;
+			}
+		case Lane.Mid:
+			{
+				networkMngScript.SpawnUnit (meleeUnit, midLoc);
+				break;
+			}
+		case Lane.Bot:
+			{
+				networkMngScript.SpawnUnit (meleeUnit, botLoc);
+				break;
+			}
 		}
 
-		if (midLane.isOn) {
-            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
-            {
-                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
-                GameObject Unit = Instantiate(meleeUnit);
-                Unit.transform.position = midLoc;
-            }
-		}
-
-		if (botLane.isOn) {
-            if (meleeUnit.GetComponent<Unit>().cost < PlayerResources.CurrentMelee)
-            {
-                PlayerResources.CurrentMelee -= meleeUnit.GetComponent<Unit>().cost;
-                GameObject Unit = Instantiate(meleeUnit);
-                Unit.transform.position = botLoc;
-            }
-		}
 	}
 }

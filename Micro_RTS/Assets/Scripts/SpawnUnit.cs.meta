@@ -16,6 +16,8 @@ MonoImporter:
   - topSpawn: {fileID: 1613543224650136, guid: 7a86c532c7ea68e43943cee5d11e6c4a, type: 2}
   - midSpawn: {fileID: 1638972232626928, guid: 81b42e0f03cc4c14a971d228bb3aeef5, type: 2}
   - botSpawn: {fileID: 1373011246988466, guid: 728ecb7d2e6b0b74abbf0058e5844bac, type: 2}
+  - networkMng: {fileID: 1422110875449126, guid: d1d77b026961aac45b2c6ec022a9e015,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

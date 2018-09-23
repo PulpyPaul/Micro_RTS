@@ -38,7 +38,7 @@ public class SpawnUnit : MonoBehaviour {
     Random generator = new Random();
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         PlayerResources = this.gameObject.GetComponent<Resources>();
 		topLoc = new Vector3 (-3.5f, 3, 0);
 		midLoc = new Vector3 (-3.5f, 0, 0);
@@ -51,8 +51,8 @@ public class SpawnUnit : MonoBehaviour {
 		Debug.Log (networkMngScript);
         //InvokeRepeating("spawnEnemy", 3.0f, 2.0f);
     }
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
 	void Update () {
 
 	}
@@ -134,28 +134,5 @@ public class SpawnUnit : MonoBehaviour {
                 Unit.transform.position = botLoc;
             }
         }
-	}
-
-	public void SpawnMelee(Lane lane)
-	{
-		switch (lane)
-		{
-		case Lane.Top:
-			{
-				networkMngScript.SpawnUnit (meleeUnit, topLoc);
-				break;
-			}
-		case Lane.Mid:
-			{
-				networkMngScript.SpawnUnit (meleeUnit, midLoc);
-				break;
-			}
-		case Lane.Bot:
-			{
-				networkMngScript.SpawnUnit (meleeUnit, botLoc);
-				break;
-			}
-		}
-
 	}
 }

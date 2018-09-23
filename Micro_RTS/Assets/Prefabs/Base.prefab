@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61708100158104942}
   - component: {fileID: 50414787901466742}
   - component: {fileID: 114610406667511168}
-  - component: {fileID: 114538576558395172}
+  - component: {fileID: 114022129995240162}
   m_Layer: 0
   m_Name: Base
   m_TagString: base
@@ -90,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
---- !u!114 &114538576558395172
+--- !u!114 &114022129995240162
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,11 +98,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1354111884460256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be8a931f8382d847bdcbbde5af408c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c6d773478af9ed499bc31dd298029b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 1829458866422810, guid: f1c4000ea38e7764ba2b2c96f0250e0d,
-    type: 2}
+  rngUnit: {fileID: 1422110875449126, guid: d1d77b026961aac45b2c6ec022a9e015, type: 2}
+  meleeUnit: {fileID: 1422110875449126, guid: 549de03d485d1cf44a5131722ff0486b, type: 2}
 --- !u!114 &114610406667511168
 MonoBehaviour:
   m_ObjectHideFlags: 1

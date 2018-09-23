@@ -15,8 +15,6 @@ public class PlayerControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Alpha1)) {
-			unitSpawner.SpawnMelee (SpawnUnit.Lane.Top);
-		}
+		
 	}
 }
